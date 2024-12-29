@@ -34,3 +34,9 @@ function createBook(title, author, pages) {
 
 const book1 = createBook("atomic", "james", 306)
 const book2 = createBook("think", "Napolean", 450)
+
+book1.color = "white" //aplicando propridade posteriormente
+
+
+console.log(book1)
+console.log(book2)
