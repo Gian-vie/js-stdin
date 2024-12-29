@@ -11,6 +11,8 @@ num.splice(3, 0, 4, 5, 6);
 // segundo numero = "vai substituir?",
 // demais = valores
 
+let num1 = num
+
 num.pop()// remove o ultimo
 
 num.splice(2, 3) //vai remover 3 numeros apartir do indice 2
@@ -30,3 +32,7 @@ clientes.sort()// ordena em ordem alfabetica
 clientes.reverse() //inverte a ordem do array
 
 
+
+const checPositives = num.every(value => value >= 0) //verifica se todos os valores são positivos
+
+const mostraPositives = num.filter(value => value >= 0) //retorna apenas os valores positivos
