@@ -49,3 +49,15 @@ function countVowels(text){
     return vowels
 }
 
+function sumEvenNumbers (arr){
+    let soma = 0
+    if(arr.length === 0){
+        return 0
+    }
+    for(let i = 0; i < arr.length; i++){
+       if(arr[i] % 2 === 0){
+        soma += arr[i]
+       }
+    }
+    return soma
+}
