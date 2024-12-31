@@ -35,4 +35,4 @@ clientes.reverse() //inverte a ordem do array
 
 const checPositives = num.every(value => value >= 0) //verifica se todos os valores são positivos
 
-const mostraPositives = num.filter(value => value >= 0) //retorna apenas os valores positivos
+const mostraPositives = num.filter(value => value >= 0) //retorna apenas os valores positivos 
