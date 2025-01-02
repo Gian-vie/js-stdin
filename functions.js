@@ -128,3 +128,35 @@ function imprimirNumeros(...args){
 }
 // exemplo
 // imprimirNumeros(4,3,6,2,7,6,2,6,3,5,4,8)
+
+
+function findMaxNumber(arr){
+    let maior = Math.max(...arr)
+    return maior
+} 
+
+function sumUniqueNumbers(numbers) {
+    /**
+     * Calcula a soma de todos os números que aparecem apenas uma vez em um array.
+     *
+     * @param {Array} numbers - Lista de números inteiros (positivos ou negativos).
+     * @returns {number} - Soma dos números únicos no array.
+     */
+    // Objeto para armazenar a contagem de cada número
+    const count = {};
+
+    // Contar a ocorrência de cada número
+    for (const num of numbers) {
+        count[num] = (count[num] || 0) + 1;
+    }
+
+    // Somar os números que aparecem apenas uma vez
+    let uniqueSum = 0;
+    for (const [num, c] of Object.entries(count)) {
+        if (c === 1) {
+            uniqueSum += Number(num);
+        }
+    }
+
+    return uniqueSum;
+}
