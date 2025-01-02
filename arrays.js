@@ -62,3 +62,43 @@ clientes.forEach(element => {
 });
 
 clientes.includes("Andre")// retorna true ou false 
+
+
+//      DESTRUCTURING 
+//desestruturar um array em variaveis
+let numeros1 = [1,2,3,4,5]
+
+const[num2,num3,num4,num5,num6,] = numeros1
+
+
+//MANIPULAÇÂO DE STRINGS <<<<<<<<<<------------------
+
+
+//      .TRIM
+let nomeCliente = '     /n     nome '
+//para remover qualquer caractere que 
+// n é uma string como espaço, /n, /^, etc
+let nomeClienteCorigido = nomeCliente.trim()
+
+
+//      .PEDSTART
+let milAoContrario = '1';
+// (quantos elementos deve ter?, 'preencher de?')
+milAoContrario.pedstart(4, '0'); 
+
+
+//      .SPLIT
+//torna a string em array
+let frase = "olá mundo bom dia"
+
+let arrayDeString = frase.split(" "); 
+//vai separar pelo q tiver entre as aspas, no caso o espaço
+
+//      .JOIN
+//torna a array em string
+let fraseInt = arrayDeString.join(" ") 
+//vai juntar, separando por espaço os elementos da array
+
+//       .REPEAT
+frase.repeat(10);// vai repetir 10 vezes
+

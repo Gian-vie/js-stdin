@@ -117,3 +117,14 @@ function sumEvenNumbers (arr){
     }
     return soma
 }
+
+
+//      REST (...)
+//faz com que a função considere todos os elementos que está recebendo
+function imprimirNumeros(...args){
+    for(let i = 0; i < args.length; i++){
+        console.log(args[i])
+    }
+}
+// exemplo
+// imprimirNumeros(4,3,6,2,7,6,2,6,3,5,4,8)

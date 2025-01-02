@@ -41,3 +41,15 @@ pessoa2.nome = "Pedro"
 pessoa.nome = "Matheus" 
 // altera de ambos, tanto pessoa quanto pessoa2
 
+
+//      DESTRUCTURIN OBJ
+//desestruturar um obj em variaveis
+
+let car = {
+    rodas: 4,
+    motor: 1.2
+}
+
+const {rodas: vRodas, motor: vMotor} = car;
+//vai espelhar os valores contidos em car
+// console.log(vRodas, vMotor) 
