@@ -64,7 +64,7 @@ clientes.forEach(element => {
 clientes.includes("Andre")// retorna true ou false 
 
 
-//      DESTRUCTURING 
+//      DESTRUCTURING arrays
 //desestruturar um array em variaveis
 let numeros1 = [1,2,3,4,5]
 

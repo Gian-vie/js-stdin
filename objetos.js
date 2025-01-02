@@ -42,7 +42,7 @@ pessoa.nome = "Matheus"
 // altera de ambos, tanto pessoa quanto pessoa2
 
 
-//      DESTRUCTURIN OBJ
+//      DESTRUCTURING OBJ
 //desestruturar um obj em variaveis
 
 let car = {
