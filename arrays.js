@@ -36,3 +36,29 @@ clientes.reverse() //inverte a ordem do array
 const checPositives = num.every(value => value >= 0) //verifica se todos os valores são positivos
 
 const mostraPositives = num.filter(value => value >= 0) //retorna apenas os valores positivos 
+
+
+// ADIÇÃO E REMOÇÃO DE ELEMENTOS NO ARRAY
+
+/* 
+--> NO FINAL DO ARRAY
+adicionar:
+array.push(elemento)
+remover:
+array.pop()
+
+--> NO COMEÇO DO ARRAY
+adicionar:
+array.unshift(elemento)
+remover:
+array.shift()
+*/
+
+
+// .forEach faz uma varedura como um loop
+//       onde o element representa o indice
+clientes.forEach(element => {
+    console.log(`o nome do cliente é ${element}`)
+});
+
+clientes.includes("Andre")// retorna true ou false 
