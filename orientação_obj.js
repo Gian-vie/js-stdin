@@ -99,10 +99,56 @@ class CachorroClass{
     }
 
     latir (){
-        console.log("au au")
+        console.log("au au");
+    };
+
+    get getCor(){
+        return this.cor;
     }
 
-}
+    set setCor(cor){
+        this.cor = cor;
+    }
+
+};
 
 CachorroClass.prototype.raca = "SRD";
-CachorroClass.prototype.patas = 4;
+// CachorroClass.prototype.patas = 4;
+
+
+//symbol
+CachorroClass.prototype[patas] = 4;
+
+//acessar Symbol
+console.log(CachorroClass.prototype[patas]);
+
+
+//get/ set  
+let pastor = new CachorroClass("Pastor Alemão", "indefinido")
+
+pastor.setCor = "marrom";
+
+
+//herança
+
+class Mamifero{
+    constructor(patas){
+        this.patas = patas;
+    }
+
+};
+
+class Coiote extends Mamifero {
+    constructor(patas, cor){
+        super(patas, patas);
+        this.cor = cor;
+    }
+}
+
+
+//Istastance of
+
+/*console.log*/(new Coiote instanceof Mamifero); // true
+
+
+// EXERCICIOS GERAIS
