@@ -163,7 +163,7 @@ class conta{
     };
 
     retirar(valor){
-        if(saldo - valor < 0){
+        if(this.saldo - valor < 0){
             return "Saldo Insuficiente";
         }
         return this.saldo -= valor;
@@ -356,4 +356,17 @@ class WordCounter {
 }//não está funcionando
 
 
-class
+class Retangulo{
+    constructor(altura,largura){
+        this.altura = altura;
+        this.largura = largura;
+    }
+
+    calcularArea(){
+        return this.largura * this.altura;
+    }
+
+    calcularPerimetro(){
+        return 2 * (this.largura + this.altura)
+    }
+}
