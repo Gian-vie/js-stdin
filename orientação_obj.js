@@ -152,3 +152,25 @@ class Coiote extends Mamifero {
 
 
 // EXERCICIOS GERAIS
+
+class Banco{
+    constructor(valor){
+        this.saldo = 0 + valor;
+    };
+
+    verSaldo (){
+        return this.saldo;
+    };
+
+    retirar(valor){
+        if(saldo - valor < 0){
+            return "Saldo Insuficiente";
+        }
+        return this.saldo -= valor;
+    };
+    
+    depositar(valor){
+        return this.saldo += valor;
+    };
+};
+
