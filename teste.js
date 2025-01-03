@@ -1,29 +1,28 @@
-class ContaBronze{
-    constructor(saldoCorrente, saldoPoupansa, juros){
-        this.saldoCorrente = saldoCorrente;
-        this.saldoPoupansa = saldoPoupansa;
-        this.juros = juros
+class Voo {
+    constructor(codigoVoo, origem, destino, assentosDisponiveis){
+        this.codigoVoo = codigoVoo;
+        this.origem = origem;
+        this.destino = destino;
+        this.assentosDisponiveis = assentosDisponiveis;
+    };
+
+    reservarAssento(){
+        if(this.assentosDisponiveis === 0){
+            return 'Não há assentos disponíveis para reserva.';
+        };
+        this.assentosDisponiveis--
+        return this.assentosDisponiveis
+    };
+    consultarAssentosDisponiveis(){
+        return this.assentosDisponiveis
     }
-
-    verSaldoCorrente (){
-        return `Saldo na conta corrente R$${this.saldoCorrente.toFixed(2)}` 
-    };
-
-    verSaldoPoupança (){
-        return `Saldo na conta poupança R$${this.saldoPoupansa.toFixed(2)}` 
-    };
-
-    // retirar(valor){
-    //     if(saldo - valor < 0){
-    //         return "Saldo Insuficiente";
-    //     }
-    //     return this.saldo -= valor;
-    // };
-    
-    // depositar(valor){
-    //     return this.saldo += valor;
-    // };
 }
 
-let contaBronze = new ContaBronze(100.23, 4322.322343, 3)
-console.log(contaBronze.verSaldoPoupança())
+let vooo = new Voo( 101, "canada", "algum lugar", 3 )
+
+console.log(vooo)
+console.log(vooo.consultarAssentosDisponiveis())
+console.log(vooo.reservarAssento())
+console.log(vooo.reservarAssento())
+console.log(vooo.reservarAssento())
+console.log(vooo.reservarAssento())

@@ -332,15 +332,6 @@ class ContaOuro extends ContaBronze{
     }
 }
 
-// Crie uma classe chamada WordCounter que representa um contador de palavras.
-
-// A classe deve ter um construtor que inicializa um objeto vazio.
-
-// A classe deve ter um método chamado countWords que recebe uma string como parâmetro.
-
-// O método countWords deve contar o número de palavras na string fornecida e retornar o resultado.
-
-// Considere que as palavras são separadas por espaços em branco.
 
 class WordCounter {
     constructor(){
@@ -368,5 +359,25 @@ class Retangulo{
 
     calcularPerimetro(){
         return 2 * (this.largura + this.altura)
+    }
+}
+
+class Voo {
+    constructor(codigoVoo,origem,destino, assentosDisponiveis){
+        this.codigoVoo = codigoVoo;
+        this.origem = origem;
+        this.destino = destino;
+        this.assentosDisponiveis = assentosDisponiveis;
+    };
+
+    reservarAssento(){
+        if(this.assentosDisponiveis === 0){
+            return 'Não há assentos disponíveis para reserva.';
+        };
+        this.assentosDisponiveis--
+        return this.assentosDisponiveis
+    };
+    consultarAssentosDisponiveis(){
+        return this.assentosDisponiveis
     }
 }
