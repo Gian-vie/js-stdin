@@ -174,3 +174,65 @@ class Banco{
     };
 };
 
+
+//carrinho de Ecomerse
+class Carrinho {
+    constructor(items, qnt, valorTotal){
+        this.items = items;
+        this.qnt = qnt;
+        this.valorTotal = valorTotal;
+    }
+
+    addItem(item){
+        let contador = 0
+
+        for(let itemCarrinho in this.items){
+            if(this.items[itemCarrinho].id == item.id) {
+                this.items[itemCarrinho] += item.qnt;
+                contador ++
+            }
+        }
+
+        if(contador === 0){
+            this.items.push(item);
+        }
+
+        this.qnt += item.qnt;
+        this.valorTotal += item.preco * item.qnt;
+    }
+
+    removerItem(item){
+        for(let itemCarrinho in this.items){
+            if(this.items[itemCarrinho].id == item.id) {
+                
+                let obj = this.items[itemCarrinho];
+                let index = this.items.findIndex(function(obj){ return obj.id === item.id})
+                
+                this.qnt -= this.items[itemCarrinho].qnt;
+                this.valorTotal -= this.items[itemCarrinho].preco * this.items[itemCarrinho].qnt;
+                
+                this.items.splice(index, 1)
+
+            }
+        }
+
+    }
+
+
+
+}
+
+let carrinho = new Carrinho([
+    {
+        id: 1,
+        nome: "camisa",
+        qnt: 1,
+        preco: 20
+    },
+    {
+        id: 2,
+        nome: "calça",
+        qnt: 2,
+        preco: 50
+    }
+], 3, 120)
