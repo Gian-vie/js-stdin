@@ -153,7 +153,7 @@ class Coiote extends Mamifero {
 
 // EXERCICIOS GERAIS
 
-class Banco{
+class conta{
     constructor(valor){
         this.saldo = 0 + valor;
     };
@@ -236,3 +236,124 @@ let carrinho = new Carrinho([
         preco: 50
     }
 ], 3, 120)
+
+//endereço
+class Endereço{
+    constructor(rua, bairro, cidade, estado){
+        this.rua = rua;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado
+    }
+
+    get getRua(){
+        return this.rua;
+    }
+    get getBairro(){
+        return this.bairro;
+    }
+    get getCidade(){
+        return this.cidade;
+    }
+    get getEstado(){
+        return this.estado;
+    }
+
+    set setRua(Rua){
+        this.rua = Rua;
+    }
+    set setBairro(Bairro){
+        this.bairro = Bairro;
+    }
+    set setCidade(Cidade){
+        this.cidade = Cidade;
+    }
+    set setEstado(Estado){
+        this.estado = Estado;
+    }
+}
+
+
+//banco e conta especial
+class ContaBronze{
+    constructor(saldoCorrente, saldoPoupansa, juros){
+        this.saldoCorrente = saldoCorrente;
+        this.saldoPoupansa = saldoPoupansa;
+        this.juros = juros
+    }
+
+    verSaldoCorrente (){
+        return `Saldo na conta corrente R$${this.saldoCorrente.toFixed(2)}` 
+    };
+
+    verSaldoPoupança (){
+        return `Saldo na conta poupança R$${this.saldoPoupansa.toFixed(2)}` 
+    };
+
+    retirar(valor){
+        if(this.saldoCorrente - valor < 0){
+            return "Saldo Insuficiente";
+        }
+        return this.saldoCorrente -= valor;
+    };
+    
+    depositar(valor){
+        return this.saldoCorrente += valor;
+    };
+
+    correnteToPoupança(valor){
+        if(this.saldoCorrente - valor < 0){
+            return "Saldo Insuficiente";
+        }
+        this.saldoCorrente -= valor;
+        this.saldoPoupansa += valor;
+    }
+
+    poupansaToCorrente(valor){
+        if(this.saldoPoupansa - valor < 0){
+            return "Saldo Insuficiente";
+        }
+        this.saldoPoupansa -= valor;
+        this.saldoCorrente += valor;
+    }
+
+    jurosAnuversario(){
+        this.saldoPoupansa += this.saldoPoupansa * (this.juros / 100)
+    }
+
+}
+
+let contaBronze = new ContaBronze(100.23, 4322.322343, 3)
+// console.log(contaBronze.verSaldoPoupança())
+
+class ContaOuro extends ContaBronze{
+    constructor(saldoCorrente, saldoPoupansa, juros){
+        super(saldoCorrente, saldoPoupansa, juros*2)
+    }
+}
+
+// Crie uma classe chamada WordCounter que representa um contador de palavras.
+
+// A classe deve ter um construtor que inicializa um objeto vazio.
+
+// A classe deve ter um método chamado countWords que recebe uma string como parâmetro.
+
+// O método countWords deve contar o número de palavras na string fornecida e retornar o resultado.
+
+// Considere que as palavras são separadas por espaços em branco.
+
+class WordCounter {
+    constructor(){
+        this.palavras = 0
+    }
+
+    countWords(text){
+        let words = text.split(/\s+/)
+        this.palavras = words.length
+        return this.palavras
+    }
+
+}//não está funcionando
+
+
+class
