@@ -29,11 +29,28 @@
 //exception
 // verificação para outros programadores
 
-function saudação (text){
-    if(typeof text != "string"){
-        throw new Error("o parametro precisa ser uma string")
-    }else {
-        console.log(`Olá ${text}`)
-    }
-} 
+// function saudação (text){
+//     if(typeof text != "string"){
+//         throw new Error("o parametro precisa ser uma string")
+//     }else {
+//         console.log(`Olá ${text}`)
+//     }
+// } 
 
+// try / catch
+
+// try {
+//     let a = 2 + b;
+// } catch(error) {
+//     console.log(error);
+// }
+
+// finally
+
+// try {
+//     let a = 2 + b;
+// } catch(error) {
+//     console.log(error);
+// } finally{
+//     console.log("executou")
+// }
