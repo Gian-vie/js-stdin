@@ -26,3 +26,67 @@ console.log(vooo.reservarAssento())
 console.log(vooo.reservarAssento())
 console.log(vooo.reservarAssento())
 console.log(vooo.reservarAssento())
+
+
+class Livro {
+    constructor(titulo, autor, disponivel){
+        this.titulo = titulo
+        this.autor = autor
+        this.disponivel = disponivel
+    }
+
+    emprestar(){
+        if(this.disponivel){
+            this.disponivel = false;
+            return "Disponível"
+        }else {
+            return "Indisponível"
+        }
+    }
+
+    devolver(){
+        if(!this.disponivel){
+        this.disponivel = true;
+        return "Disponível"
+        }
+    }
+    
+        
+    consultarDisponibilidade(){
+        return this.disponivel? "O livro já está disponível" : "O livro não está disponível para empréstimo."
+    }    
+    
+}
+
+class Livro {
+    constructor(titulo, autor){
+        this.titulo = titulo
+        this.autor = autor
+        this.disponivel = Boolean
+    }
+
+    emprestar(){
+        if(this.disponivel){
+            this.disponivel = false;
+            return "Disponível"
+        }else {
+            return "O livro não está disponível para empréstimo."
+        }
+    }
+
+    devolver(){
+        if(this.disponivel){
+            return "O livro já está disponível."
+        }else {
+        this.disponivel = true;
+        return "Disponível"
+    }
+        
+    }
+    
+        
+    consultarDisponibilidade(){
+        return this.disponivel? "Disponível" : "Indisponível"
+    }    
+    
+}

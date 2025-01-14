@@ -14,7 +14,7 @@ let player2 = 0;
 for (let i = 0; i < boxes.length; i++) {
   //quando clica na caixa
   boxes[i].addEventListener("click", function() {
-    let el;
+    let el
     if (player1 == player2) {
       //x
       el = x;
@@ -25,3 +25,4 @@ for (let i = 0; i < boxes.length; i++) {
     this.appendChild(cloneEl);
   });
 }
+//não finalizado - aula 314

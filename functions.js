@@ -160,3 +160,12 @@ function sumUniqueNumbers(numbers) {
 
     return uniqueSum;
 }
+
+
+function removeDuplicates(array) {
+    // Cria um conjunto (Set) para armazenar apenas elementos únicos
+    const uniqueElements = new Set(array);
+
+    // Converte o conjunto de volta para um array
+    return Array.from(uniqueElements);
+}
